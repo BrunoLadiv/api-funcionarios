@@ -50,6 +50,17 @@ namespace api_c_.Controllers
             ServiceResponse<List<FuncionarioModel>> serviceResponse = await _funcionarioInterface.InativaFuncionario(id);
             return Ok(serviceResponse);
         }
+        [HttpDelete("{id}")]
+
+        public async Task<ActionResult<ServiceResponse<List<FuncionarioModel>>>> DeleteFuncionario(int id)
+        {
+            ServiceResponse<List<FuncionarioModel>> serviceResponse = await _funcionarioInterface.DeleteFuncionario(id);
+            if (!serviceResponse.Sucesso)
+            {
+                return NotFound(serviceResponse);
+            }
+            return Ok(serviceResponse);
+        }
 
 
     }
