@@ -8,6 +8,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Service\NewFolder1\**" />
+    <Compile Remove="Service\NewFolder3\**" />
+    <Content Remove="Service\NewFolder1\**" />
+    <Content Remove="Service\NewFolder3\**" />
+    <EmbeddedResource Remove="Service\NewFolder1\**" />
+    <EmbeddedResource Remove="Service\NewFolder3\**" />
+    <None Remove="Service\NewFolder1\**" />
+    <None Remove="Service\NewFolder3\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.2" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="10.0.2" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="10.0.2">
@@ -20,11 +31,6 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Scalar.AspNetCore" Version="2.12.13" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Controllers\" />
-    <Folder Include="Service\" />
   </ItemGroup>
 
 </Project>
